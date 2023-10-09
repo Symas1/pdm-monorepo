@@ -1,7 +1,7 @@
 install:
 	pdm install
 
-build:
+build: install
 	docker build -t pdm:latest .
 
 run:

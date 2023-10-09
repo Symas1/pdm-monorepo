@@ -5,7 +5,9 @@ WORKDIR /project
 COPY pyproject.toml pdm.lock ./
 COPY src src/
 
-RUN pip install pdm && pdm install --no-editable --group api
+RUN pip install pdm  \
+    && pdm lock --prod --group api --lockfile api.lock  \
+    && pdm sync --lockfile api.lock
 
 
 FROM python:3.11.6-slim-bookworm
