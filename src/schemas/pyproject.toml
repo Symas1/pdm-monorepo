@@ -1,0 +1,11 @@
+[project]
+name = "schemas"
+version = "0.1.0"
+dependencies = ["pydantic-settings>=2.0.3"]
+
+[tool.pdm.build]
+includes = ["seagull"]
+
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"

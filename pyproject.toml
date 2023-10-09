@@ -1,0 +1,12 @@
+[project]
+requires-python = ">=3.11"
+
+[project.optional-dependencies]
+api = ["api @ file:///${PROJECT_ROOT}/src/api"]
+test = ["pytest>=7.4.2"]
+
+[tool.pdm.dev-dependencies]
+dev = [
+    "-e file:///${PROJECT_ROOT}/src/api",
+    "-e file:///${PROJECT_ROOT}/src/schemas",
+]

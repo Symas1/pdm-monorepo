@@ -1,0 +1,11 @@
+[project]
+name = "api"
+version = "0.1.0"
+dependencies = ["schemas @ file:///${PROJECT_ROOT}/../schemas"]
+
+[tool.pdm.build]
+includes = ["seagull"]
+
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
