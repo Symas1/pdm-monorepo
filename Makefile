@@ -2,7 +2,7 @@ install:
 	pdm install
 
 build:
-	docker build -t pdm:latest -f projects/api/Dockerfile .
+	docker build -t pdm:latest .
 
 run:
 	docker run --rm pdm
